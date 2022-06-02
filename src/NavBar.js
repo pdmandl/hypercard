@@ -15,7 +15,7 @@ export const NavBar = ({ accounts, setAccounts }) => {
         </Box>
         <Box>
           <a
-            href="https://twitter.com/moonblurgs"
+            href="https://opensea.io/collection/moonblurgs-wtf"
             target="_blank"
             rel="noreferrer"
           >
