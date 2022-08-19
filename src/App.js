@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import url from "./assets/music/sound.mp3";
+
 import "./App.css";
 
 import { NavBar } from "./NavBar";
