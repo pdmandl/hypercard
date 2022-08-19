@@ -75,4 +75,12 @@
   background-position: 40% 40%;
 }
 
-
+@media screen and (max-width: 600px) {
+  .onlyDesktop  {
+    visibility: hidden;
+    display: none;
+  }
+  .marginOnPhone {
+    margin-right: 100px;
+  }
+}

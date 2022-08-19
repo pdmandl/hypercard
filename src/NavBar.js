@@ -77,36 +77,39 @@ export const NavBar = ({ accounts, setAccounts }) => {
           cursor="pointer"
           marginLeft="15px"
           marginTop="5px"
+          className="onlyDesktop"
         >
           {playing ? "Sound off" : "Sound on"}
         </Button>
-        {isConnected ? (
-          <Box
-            marginLeft="15px"
-            marginTop="15px"
-            cursor="pointer"
-            fontSize="11px"
-            onClick={disconnect}
-          >
-            Connected
-          </Box>
-        ) : (
-          <Button
-            onClick={connectAccount}
-            borderRadius="5px"
-            backgroundColor="#55AEEF"
-            boxShadow="0px 2px 2px 1px #0F0F0F"
-            fontFamily="inherit"
-            color="white"
-            fontSize="11px"
-            height="30px"
-            cursor="pointer"
-            marginLeft="15px"
-            marginTop="5px"
-          >
-            Connect
-          </Button>
-        )}
+        <div className="marginOnPhone">
+          {isConnected ? (
+            <Box
+              marginLeft="15px"
+              marginTop="15px"
+              cursor="pointer"
+              fontSize="11px"
+              onClick={disconnect}
+            >
+              Connected
+            </Box>
+          ) : (
+            <Button
+              onClick={connectAccount}
+              borderRadius="5px"
+              backgroundColor="#55AEEF"
+              boxShadow="0px 2px 2px 1px #0F0F0F"
+              fontFamily="inherit"
+              color="white"
+              fontSize="11px"
+              height="30px"
+              cursor="pointer"
+              marginLeft="15px"
+              marginTop="5px"
+            >
+              Connect
+            </Button>
+          )}
+        </div>
       </Flex>
     </Flex>
   );
