@@ -77,10 +77,8 @@ export const NavBar = ({ accounts, setAccounts }) => {
           cursor="pointer"
           marginLeft="15px"
           marginTop="5px"
-          className="tooltip"
         >
           {playing ? "Sound off" : "Sound on"}
-          <span class="tooltiptext">reNovation by airtone</span>
         </Button>
         {isConnected ? (
           <Box
