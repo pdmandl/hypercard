@@ -53,7 +53,7 @@ export const MainMint = ({ accounts, setAccounts }) => {
     setMintAmount(mintAmount - 1);
   };
   const handleIncrement = () => {
-    if (mintAmount >= 3) return;
+    if (mintAmount >= 2) return;
     setMintAmount(mintAmount + 1);
   };
   getTotalSupply();
@@ -160,14 +160,7 @@ export const MainMint = ({ accounts, setAccounts }) => {
             </Text>
           </div>
         )}
-        <div class="attribution-block" style={{ fontSize: "5px" }}>
-          <a href="http://dig.ccmixter.org/files/airtone/60674">reNovation</a>{" "}
-          by airtone (c) copyright 2019 Licensed under a Creative Commons{" "}
-          <a href="http://creativecommons.org/licenses/by/3.0/">
-            Attribution (3.0)
-          </a>{" "}
-          license.{" "}
-        </div>{" "}
+        <div class="attribution-block" style={{ fontSize: "5px" }}></div>{" "}
       </Box>
     </Flex>
   );
