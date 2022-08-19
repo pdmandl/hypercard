@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { ethers, BigNumber } from "ethers";
 import { Box, Flex, Text, Button, Input } from "@chakra-ui/react";
-
+import logo from "./assets/background/hyper.png";
 import moonblurgs from "./moonblurgs.json";
 
 const moonblurgsAddress = "0x5e550f60Bc59a225540d40D550860c11ec552902";
@@ -62,6 +62,7 @@ export const MainMint = ({ accounts, setAccounts }) => {
     <Flex justify="center" align="center" height="100vh" marginBottom="250px">
       <Box width="520px">
         <div>
+          <img src={logo} height="250px" style={{ marginTop: "-250px" }}></img>
           <Text fontSize="35px" textShadow="0 5px #0F0F0F" fontFamily="inherit">
             HyperCards by Hypercard
           </Text>
@@ -151,13 +152,15 @@ export const MainMint = ({ accounts, setAccounts }) => {
             </Text>
           )
         ) : (
-          <Text
-            fontSize="30px"
-            textShadow="0 2px 2px #0F0F0F"
-            fontFamily="VT323"
-          >
-            You need to connect your wallet, to mint a HyperCard.
-          </Text>
+          <div style={{ marginBottom: "100px" }}>
+            <Text
+              fontSize="30px"
+              textShadow="0 2px 2px #0F0F0F"
+              fontFamily="VT323"
+            >
+              You need to connect your wallet, to mint a HyperCard.
+            </Text>
+          </div>
         )}
       </Box>
     </Flex>

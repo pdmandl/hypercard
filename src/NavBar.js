@@ -16,7 +16,7 @@ export const NavBar = ({ accounts, setAccounts }) => {
   return (
     <Flex justify="space-between" align="center" padding="30px">
       <Flex justify="space-around" width="30%" padding="10px 70px">
-        <div style={{ margin: "10px", cursor: "pointer" }}>
+        <div style={{ margin: "10px", cursor: "pointer", fontSize: "13px" }}>
           <a
             href="https://twitter.com/hypercardhero"
             target="_blank"
@@ -25,7 +25,7 @@ export const NavBar = ({ accounts, setAccounts }) => {
             Twitter
           </a>
         </div>
-        <div style={{ margin: "10px" }}>Opensea</div>
+        <div style={{ margin: "10px", fontSize: "13px" }}>Opensea</div>
       </Flex>
 
       <Flex justify="space-around" width="30%" padding="30px 30px 30px 30px">
