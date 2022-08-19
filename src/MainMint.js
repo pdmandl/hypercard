@@ -62,7 +62,6 @@ export const MainMint = ({ accounts, setAccounts }) => {
     <Flex justify="center" align="center" height="100vh" marginBottom="250px">
       <Box width="520px">
         <div>
-          <img src=""></img>
           <Text fontSize="35px" textShadow="0 5px #0F0F0F" fontFamily="inherit">
             HyperCards by Hypercard
           </Text>
