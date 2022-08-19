@@ -1,28 +1,46 @@
 import React from "react";
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, Spacer, Button } from "@chakra-ui/react";
 export const NavBar = ({ accounts, setAccounts }) => {
+  const isConnected = Boolean(accounts[0]);
+  async function connectAccount() {
+    if (window.ethereum) {
+      const accounts = await window.ethereum.request({
+        method: "eth_requestAccounts",
+      });
+      if (accounts) setAccounts(accounts);
+    }
+  }
+  function disconnect() {
+    setAccounts([]);
+  }
   return (
-    <div>
-      <Flex justify="space-between" align="center" padding="30px">
-        <Box>
-          <a
-            href="https://twitter.com/moonblurgs"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <button id="home_button"></button>
-          </a>
-        </Box>
-        <Box>
-          <a
-            href="https://opensea.io/collection/moonblurgs-wtf"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <button id="opensea_button"></button>
-          </a>
-        </Box>
+    <Flex justify="space-between" align="center" padding="30px">
+      <Flex justify="space-around" width="30%" padding="10px 70px">
+        <div style={{ margin: "20px" }}>Twitter</div>
+        <div style={{ margin: "20px" }}>Opensea</div>
       </Flex>
-    </div>
+
+      <Flex justify="space-around" width="30%" padding="30px 30px 30px 30px">
+        {isConnected ? (
+          <Box margin="0 15px" cursor="pointer" onClick={disconnect}>
+            Connected
+          </Box>
+        ) : (
+          <Button
+            onClick={connectAccount}
+            borderRadius="5px"
+            backgroundColor="#55AEEF"
+            boxShadow="0px 2px 2px 1px #0F0F0F"
+            fontFamily="inherit"
+            color="white"
+            height="30px"
+            cursor="pointer"
+            margin="0 15px"
+          >
+            Connect
+          </Button>
+        )}
+      </Flex>
+    </Flex>
   );
 };

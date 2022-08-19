@@ -7,11 +7,12 @@ import { MainMint } from "./MainMint";
 function App() {
   const [accounts, setAccounts] = useState([]);
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="overlay">
+      <div className="App">
+        <NavBar accounts={accounts} setAccounts={setAccounts} />
         <MainMint accounts={accounts} setAccounts={setAccounts} />
-      </header>
-      <NavBar accounts={accounts} setAccounts={setAccounts} />
+      </div>
+      <div className="moving-background"></div>
     </div>
   );
 }
