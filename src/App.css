@@ -76,7 +76,13 @@
 }
 
 @media screen and (max-width: 600px) {
-  .onlyDesktop  {
+  .text {
+    font-size: 8px!important;
+  }
+  .logo {
+    margin-left: -100px;
+  }
+  .onlyDesktop {
     visibility: hidden;
     display: none;
   }
