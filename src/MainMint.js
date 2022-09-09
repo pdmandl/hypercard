@@ -44,7 +44,10 @@ export const MainMint = ({ accounts, setAccounts }) => {
           BigNumber.from(mintAmount),
           { value: ethers.utils.parseEther(String(0)) }
         );
-        console.log("response: ", response);
+        console.log(response);
+        toast(
+          `Successfully minted ${mintAmount} item${mintAmount > 1 ? "s" : ""}.`
+        );
       } catch (e) {
         toast(e.error.message);
       }

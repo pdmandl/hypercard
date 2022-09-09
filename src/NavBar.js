@@ -38,12 +38,18 @@ export const NavBar = ({ accounts, setAccounts }) => {
       });
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const network = await provider.getNetwork();
-      if (accounts && network.chainId === 4) setAccounts(accounts);
+      /**
+       * TODO: set chain id to mainnet
+       */
+      if (accounts && network.chainId === 111) setAccounts(accounts);
       else {
         toast(
-          "Wrong network selected! You need to be connected to ethereum mainnet in order to mint."
+          //"Wrong network selected! You need to be connected to ethereum mainnet in order to mint."
+          "Mint has not started yet. Stay tuned..."
         );
       }
+    } else {
+      toast("You need a metamask wallet installed to mint.");
     }
   }
   function disconnect() {
