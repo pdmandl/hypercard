@@ -93,9 +93,10 @@ export const NavBar = ({ accounts, setAccounts }) => {
               fontSize: "11px",
               className: "text",
             }}
-            href="https://opensea.io/collection/hypercards-by-hypercard"
           >
-            Opensea
+            <a href="https://opensea.io/collection/hypercards-by-hypercard">
+              Opensea
+            </a>
           </div>
         </Flex>
         <Flex justify="space-around" width="20%">
