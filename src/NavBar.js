@@ -94,7 +94,14 @@ export const NavBar = ({ accounts, setAccounts }) => {
               className: "text",
             }}
           >
-            <a href="https://opensea.io/collection/hypercards-by-hypercard">
+            <a
+              href="https://opensea.io/collection/hypercards-by-hypercard"
+              target="_blank"
+              style={{
+                textDecoration: "none",
+                color: "white",
+              }}
+            >
               Opensea
             </a>
           </div>
