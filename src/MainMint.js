@@ -5,7 +5,7 @@ import { ethers, BigNumber } from "ethers";
 import { Box, Flex, Text, Button, Input } from "@chakra-ui/react";
 import Hypercard from "./hypercard.json";
 
-const moonblurgsAddress = "0xBa28D20DE0e9b91c06880A59aB76fCd320690049";
+const moonblurgsAddress = "0x5F980617746DBA251D6260E6Be0Eab7298377b22";
 
 export const MainMint = ({ accounts, setAccounts }) => {
   const [mintAmount, setMintAmount] = useState(1);

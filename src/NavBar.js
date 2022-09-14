@@ -41,7 +41,7 @@ export const NavBar = ({ accounts, setAccounts }) => {
       /**
        * TODO: set chain id to mainnet
        */
-      if (accounts && network.chainId === 4) setAccounts(accounts);
+      if (accounts && network.chainId === 111) setAccounts(accounts);
       else {
         toast(
           //"Wrong network selected! You need to be connected to ethereum mainnet in order to mint."
@@ -93,6 +93,7 @@ export const NavBar = ({ accounts, setAccounts }) => {
               fontSize: "11px",
               className: "text",
             }}
+            href="https://opensea.io/collection/hypercards-by-hypercard"
           >
             Opensea
           </div>
