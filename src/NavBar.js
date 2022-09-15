@@ -8,9 +8,13 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export const NavBar = ({ accounts, setAccounts }) => {
+  const [playing, setPlaying] = useState(false);
+  function disconnect() {
+    setPlaying(false);
+    setAccounts([]);
+  }
   const useAudio = (url) => {
     const [audio] = useState(new Audio(url));
-    const [playing, setPlaying] = useState(false);
 
     const toggle = () => setPlaying(!playing);
 
@@ -28,11 +32,10 @@ export const NavBar = ({ accounts, setAccounts }) => {
     return [playing, toggle];
   };
   const isConnected = Boolean(accounts[0]);
-  const [playing, toggle] = useAudio(url);
+  const [playing1, toggle] = useAudio(url);
 
   async function connectAccount() {
     if (window.ethereum) {
-      toggle();
       const accounts = await window.ethereum.request({
         method: "eth_requestAccounts",
       });
@@ -41,18 +44,18 @@ export const NavBar = ({ accounts, setAccounts }) => {
       /**
        * TODO: set chain id to mainnet
        */
-      if (accounts && network.chainId === 1) setAccounts(accounts);
-      else {
+      if (accounts && network.chainId === 111) {
+        setPlaying(true);
+        setAccounts(accounts);
+      } else {
         toast(
-          "Wrong network selected! You need to be connected to ethereum mainnet in order to mint."
+          //"Wrong network selected! You need to be connected to ethereum mainnet in order to mint."
+          "Mint has not started yet. Stay tuned..."
         );
       }
     } else {
       toast("You need a metamask wallet installed to mint.");
     }
-  }
-  function disconnect() {
-    setAccounts([]);
   }
   return (
     <div>
@@ -120,7 +123,7 @@ export const NavBar = ({ accounts, setAccounts }) => {
             marginTop="5px"
             className="onlyDesktop"
           >
-            {playing ? "Sound off" : "Sound on"}
+            {playing1 ? "Sound off" : "Sound on"}
           </Button>
           <div className="marginOnPhone">
             {isConnected ? (
