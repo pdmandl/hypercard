@@ -26,7 +26,8 @@ export const MainMint = ({ accounts, setAccounts }) => {
         const response = await contract.totalSupply();
         setTotalSupply(response.toNumber());
       } catch (e) {
-        toast(e.error.message);
+        const message = e.error.message.slice(19);
+        toast(message);
       }
     }
   }
@@ -46,10 +47,13 @@ export const MainMint = ({ accounts, setAccounts }) => {
         );
         console.log(response);
         toast(
-          `Successfully minted ${mintAmount} item${mintAmount > 1 ? "s" : ""}.`
+          `Successfully minted ${mintAmount} item${
+            mintAmount > 1 ? "s" : ""
+          }. Go and check them out on opensea.`
         );
       } catch (e) {
-        toast(e.error.message);
+        const message = e.error.message.slice(19);
+        toast(message);
       }
     }
   }
