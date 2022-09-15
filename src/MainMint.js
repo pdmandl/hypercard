@@ -72,14 +72,14 @@ export const MainMint = ({ accounts, setAccounts }) => {
               textShadow="0 5px #0F0F0F"
               fontFamily="inherit"
             >
-              HyperCards by Hypercard
+              Hypercards by HyperCard
             </Text>
             <Text
               fontSize="20px"
               textShadow="0 2px 2px #0F0F0F"
               fontFamily="VT323"
             >
-              A collection of 999 HyperCards on the Ethereum Blockchain. Holding
+              A collection of 999 Hypercards on the Ethereum Blockchain. Holding
               a HyperCard will grant you access to pre-sale and whitelist spots
               for all our upcoming projects.
             </Text>
@@ -93,7 +93,7 @@ export const MainMint = ({ accounts, setAccounts }) => {
                     textShadow="0 5px #0F0F0F"
                     fontFamily="VT323"
                   >
-                    {totalSupply} / 999 HyperCards Minted
+                    {totalSupply} / 999 Hypercards Minted
                   </Text>
                 </Flex>
                 <Flex justify="space-evenly" align="center">
@@ -155,7 +155,7 @@ export const MainMint = ({ accounts, setAccounts }) => {
                 textShadow="0 2px 2px #0F0F0F"
                 fontFamily="VT323"
               >
-                HyperCards are all minted out. Grab one on Opensea!
+                Hypercards are all minted out. Grab one on Opensea!
               </Text>
             )
           ) : (
@@ -165,7 +165,7 @@ export const MainMint = ({ accounts, setAccounts }) => {
                 textShadow="0 2px 2px #0F0F0F"
                 fontFamily="VT323"
               >
-                You need to connect your wallet, to mint a HyperCard.
+                You need to connect your wallet, to mint a Hypercard.
               </Text>
             </div>
           )}

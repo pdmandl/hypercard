@@ -41,11 +41,10 @@ export const NavBar = ({ accounts, setAccounts }) => {
       /**
        * TODO: set chain id to mainnet
        */
-      if (accounts && network.chainId === 111) setAccounts(accounts);
+      if (accounts && network.chainId === 1) setAccounts(accounts);
       else {
         toast(
-          //"Wrong network selected! You need to be connected to ethereum mainnet in order to mint."
-          "Mint has not started yet. Stay tuned..."
+          "Wrong network selected! You need to be connected to ethereum mainnet in order to mint."
         );
       }
     } else {
